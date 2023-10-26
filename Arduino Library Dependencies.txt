@@ -1,0 +1,51 @@
+Ardunio files required libraries:
+(Install all dependencies when prompted)
+
+01_OLED_Screen_test.ino
+	
+	U8g2lib by Oliver - https://github.com/olikraus/u8g2
+
+
+
+02_WIFI_POC.ino
+	
+	Arduino_JSON by Arduino - https://github.com/arduino-libraries/Arduino_JSON
+	NTPClient by Fabrice Weinberg - https://github.com/arduino-libraries/NTPClient
+
+
+03_push_button.ino
+
+	none - code uses all defaults
+
+
+04_Buzzer_tones.ino
+
+	none - code uses all defaults
+
+
+05_RGB_LED.ino
+
+	none - code uses all defaults
+
+
+06_Temp_Sensor.ino
+
+	DallasTemperature by Miles Burton - https://github.com/milesburton/Arduino-Temperature-Control-Library
+	OneWire by Jim Studt... - https://www.pjrc.com/teensy/td_libs_OneWire.html (Dependancy of DallasTemp)
+
+
+
+Clock_Demo.ino
+	TimeLib by Michael Margolis - https://playground.arduino.cc/Code/Time/
+
+
+
+flying_toasters.ino
+	Adafruit_SH110X by Adafruit - https://github.com/adafruit/Adafruit_SH110X
+		Adafruit BusIO by Adafruit - https://github.com/adafruit/Adafruit_BusIO (Dependancy of Adafruit_SH110X)
+		Adafruit GFX Library by Adafruit - https://github.com/adafruit/Adafruit-GFX-Library (Dependancy of Adafruit_SH110X)
+
+
+
+
+
