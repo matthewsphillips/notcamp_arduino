@@ -3,9 +3,6 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <Arduino_JSON.h>
-#include <NTPClient.h>
-#include <WiFiUdp.h>
-
 
 // Replace with your Wi-Fi credentials
 const char* ssid = "LabNet";
@@ -13,7 +10,6 @@ const char* password = "apple2020";
 
 const char* apiKey = "7b038439610a296932b7c5028edc7490";
 const String zipCode = "94541";  // Replace with your desired zip code
-const long utcOffsetInSeconds = 0; // Set your UTC offset (in seconds) here
 
 #define i2c_Address 0x3c //initialize with the I2C addr 0x3C Typically eBay OLED's
 
@@ -24,13 +20,9 @@ const long utcOffsetInSeconds = 0; // Set your UTC offset (in seconds) here
 #define OLED_RESET -1   //   QT-PY / XIAO
 Adafruit_SH1106G display = Adafruit_SH1106G(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
-WiFiUDP ntpUDP;
-NTPClient timeClient(ntpUDP, "pool.ntp.org", utcOffsetInSeconds);
-
 void setup() {
   Serial.begin(115200);
-  timeClient.begin();
-  timeClient.update();
+
   // Connect to Wi-Fi
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
@@ -99,4 +91,4 @@ void loop() {
   }
 
   delay(900000); // Update weather data every 15 minutes
-}
+  }
